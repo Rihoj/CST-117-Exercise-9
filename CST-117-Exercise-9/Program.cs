@@ -1,10 +1,12 @@
-﻿using System;
+﻿//use for IC08
+//Lydia's code
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CST117_IC08_console
+namespace CST117_Exercise9_console
 {
     class Program
     {
@@ -18,7 +20,10 @@ namespace CST117_IC08_console
             Random r = new Random();
             for (int i = 0; i < 10; i++)
             {
-                A.addElement(r.Next(4));
+                //Do to checking against duplicates in Set, there will never be more than 4 elements, but we are looping through this 10 times.
+                //A.addElement(r.Next(4));
+                //Updated to 10 to get a max of ten elements.
+                A.addElement(r.Next(10));
                 B.addElement(r.Next(12));
             }
 
@@ -31,7 +36,7 @@ namespace CST117_IC08_console
             Console.WriteLine("After union operation");
             Console.WriteLine("A: " + A);
             Console.WriteLine("B: " + B);
-
+            Console.ReadKey();
         }
     }
 }
